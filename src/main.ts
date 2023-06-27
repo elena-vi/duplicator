@@ -8,3 +8,23 @@ export const foo = async (): Promise<boolean> => {
   console.log('done')
   return true
 }
+
+// import { v4 as uuid } from 'uuid';
+export type ScriptSkeleton = {
+  _id: string;
+  name: string;
+  description: string;
+  default: boolean;
+  script: {},
+  language: string;
+  context: string;
+  createdBy: string;
+  creationDate: number;
+  lastModifiedBy: string;
+  lastModifiedDate: number;
+};
+
+export const idReplacer = (scripts: ScriptSkeleton, guid: Function): string => {
+  console.log(scripts)
+  return guid();
+};
