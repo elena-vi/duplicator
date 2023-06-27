@@ -24,7 +24,7 @@ export type ScriptSkeleton = {
   lastModifiedDate: number;
 };
 
-export const idReplacer = (scripts: ScriptSkeleton, guid: Function): string => {
+export const idReplacer = (scripts: Object, guid: Function): string => {
   console.log(scripts)
   return guid();
 };
